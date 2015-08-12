@@ -27,5 +27,16 @@ namespace WebApp.WebAPI.Controllers
         {
             return _dbContext.Set<UserInfo>().OrderByDescending(u => u.RegTime).Skip((page - 1) * count).Take(count).ToList();
         }
+
+        /// <summary>
+        /// 获取指定用户信息
+        /// </summary>
+        /// <param name="id">用户Id</param>
+        /// <returns></returns>
+        [HttpGet]
+        public UserInfo GetInfo(int id)
+        {
+            return _dbContext.Set<UserInfo>().FirstOrDefault(u => u.Id == id);
+        }
     }
 }
