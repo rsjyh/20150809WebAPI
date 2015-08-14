@@ -488,10 +488,17 @@
         </member>
         <member name="M:WebApp.WebAPI.Controllers.UserInfoController.GetList(System.Int32,System.Int32)">
             <summary>
-            
+            分页查询用户信息
             </summary>
-            <param name="page"></param>
-            <param name="count"></param>
+            <param name="page">页码索引</param>
+            <param name="count">每页显示条数</param>
+            <returns>指定页面用户信息集合</returns>
+        </member>
+        <member name="M:WebApp.WebAPI.Controllers.UserInfoController.GetInfo(System.Int32)">
+            <summary>
+            获取指定用户信息
+            </summary>
+            <param name="id">用户Id</param>
             <returns></returns>
         </member>
         <member name="T:WebApp.WebAPI.Models.UserInfo">
